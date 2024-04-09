@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     qn++;
                 }
                 // Increment the quiz number
-                quizno++;
+
                 updateq();
             }
         });
@@ -65,17 +65,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displaycrt() {
-        Toast.makeText(this, "Correct", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
     }
 
     public void displaywrg() {
-        Toast.makeText(this, "Wrong", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show();
     }
 
     public void updateq() {
         // Check if the current question index is within the range of questions
         if (qn < que.getlen()) {
-            t1.setText((quizno + 1) + "/" + que.getlen());
+            t1.setText(quizno + "/" + que.getlen());
 
             // Reset radio button selection
             rg.clearCheck();
